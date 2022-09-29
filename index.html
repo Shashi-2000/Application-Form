@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
+    <style type="text/CSS">
+
+        *{
+            font-family: 'Roboto Slab', serif;
+        }
+
+        #container{
+            border: 3px solid rgb(239, 64, 93);
+            border-radius: 4px;
+            padding: 25px;
+            margin: 40px 180px;
+            background-color: #f5f5f5;
+        }
+
+        #heading {
+            color: gold;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid rgb(239, 64, 93);
+        }
+
+        #fname, #Lname, #gmail, #mobile-number, #password{
+            width: 1060px;
+            padding: 12px 10px;
+            border: 1px black solid;
+            border-radius: 5px;
+        }
+
+        #address{
+            border: 1px black solid;
+            width: 1080px;
+            border-radius: 5px;
+        }
+
+        #gender{
+            width: 200px;
+            padding: 10px;
+            border: 1px black solid;
+            border-radius: 5px;
+        }
+
+        .fieldset{
+            padding: 18px;
+        }
+
+        #btn-submit{
+            margin: 12px ;
+            padding: 10px 50px;
+            background-color: rgb(239, 64, 93);
+            border: none;
+            border-radius: 3px;
+        }
+
+        #btn-submit:hover{
+            cursor: pointer;
+            background-color: rgb(221, 0, 37);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading" >Application Form</h1>
+        <form action="submitted.html" class="body">
+            <label for="fname"><b>First Name:</b></label><br>
+            <input type="text" id="fname" name="fname" placeholder="Franklin" required>
+            <br>
+            <br>
+            <label for="Lname"><b>Last Name:</b></label><br>
+            <input type="text" id="Lname" name="Lname" placeholder="Rossevelt" required>
+            <br>
+            <br>
+            <label for="gmail"><b>Gmail:</b></label><br>
+            <input type="email" id="gmail" name="gmail" placeholder="rosseveltfranklin@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <br>
+            <br>
+            <label for="gmail"><b>Mobile Number:</b></label><br>
+            <input type="tel" id="mobile-number" name="mobile-number" placeholder="12345 67890" pattern="[789][0-9]{9}" required>
+            <br>
+            <br>
+            <label for="gender"><b>Gender</b></label><br>
+            <select name="gender" id="gender" required>
+                <option value="" selected diabled hidden>&nbsp;&nbsp;--select--&nbsp;&nbsp;</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+            <br>
+            <br>
+            <label for="password" ><b>Create Password:</b></label><br>
+            <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required><br><br>
+            <label for="password"><b>Enter Password Again:</b></label><br>
+            <input type="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+            <br>
+            <br>
+            <fieldset class="fieldset">
+                <legend required><b>Select your skills</b></legend>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="html5">HTML5</label>
+                <br>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="css5">CSS5</label>
+                <br>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="javascript">JavaScript</label>
+                <br>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="angular">Angular</label>
+                <br>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="react js">React JS</label>
+                <br>
+                <input type="checkbox" name="skills" id="skills">
+                <label for="c# & .net">C# & .Net</label>
+            </fieldset>
+            <br>
+            <label for="address"><b>Address:</b></label><br>
+            <textarea name="address" id="address" cols="145" rows="5" placeholder="Enter Address"></textarea>
+            <br>
+            <br>
+            <input type="checkbox"checked required>
+            <label for="agree"><em><strong style="color:red;">I accept the terms and conditions</strong></em></label><br>
+            <button type="submit" id="btn-submit"><b>Submit</b></button>
+        </form>
+    </div>
+</body>
+</html>
